@@ -104,33 +104,33 @@ public class CollectionVisualizer <T>{
     //Public call methods to convert collections and run the code
     public void displayCollection(int heightOfCell, int widthOfCell, Font fontUsed, Iterable<T> list) throws IOException {
         Map<T, T> passedList = converter.converter(list);
-        displayArrayList(heightOfCell, widthOfCell, fontUsed, passedList);
+        displayArrayList(heightOfCell, widthOfCell, passedList);
     }
 
     public void displayCollection(int heightOfCell, int widthOfCell, Font fontUsed, Object[] array) throws IOException {
         Map<T, T> passedArray = converter.converter(List.of(array));
-        displayArrayList(heightOfCell, widthOfCell, fontUsed, passedArray);
+        displayArrayList(heightOfCell, widthOfCell, passedArray);
     }
 
-    public void displayCollection(int heightOfCell, int widthOfCell, Font fontUsed, Map<T,T> map) throws IOException {
-        displayArrayList(heightOfCell, widthOfCell, fontUsed, map);
+    public void displayCollection(int heightOfCell, int widthOfCell, Map<T,T> map) throws IOException {
+        displayArrayList(heightOfCell, widthOfCell, map);
     }
 
-    public void displayCollection(Font fontUsed, Iterable<T> list) throws IOException {
+    public void displayCollection(Iterable<T> list) throws IOException {
         Map<T, T> passedList = converter.converter(list);
-        displayArrayList(heightOfCell, widthOfCell, fontUsed, passedList);
+        displayArrayList(heightOfCell, widthOfCell, passedList);
     }
 
     public void displayCollection(Font fontUsed, Object[] array) throws IOException {
         Map<T, T> passedArray = converter.converter(List.of(array));
-        displayArrayList(heightOfCell, widthOfCell, fontUsed, passedArray);
+        displayArrayList(heightOfCell, widthOfCell, passedArray);
     }
 
     public void displayCollection(Font fontUsed, Map<T,T> map) throws IOException {
-        displayArrayList(heightOfCell, widthOfCell, fontUsed, map);
+        displayArrayList(heightOfCell, widthOfCell, map);
     }
 
-    private void displayArrayList(int heightOfCell, int widthOfCell, Font fontUsed, Map<T, T> map) throws IOException {
+    private void displayArrayList(int heightOfCell, int widthOfCell, Map<T, T> map) throws IOException {
 
         boolean saveImage = this.pathToSaveImages != null;
 
